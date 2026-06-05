@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zeeshan Ahmad — AI Engineer & Developer</title>
+  <meta name="description" content="AI Engineer specializing in Machine Learning, Intelligent Agents, and Automation Solutions." />
+
+  <!-- Fonts: Syne (display) + DM Mono (mono accent) + DM Sans (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <!-- Gradio web component -->
+  <script type="module" src="https://gradio.s3-us-west-2.amazonaws.com/4.44.0/gradio.js"></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       NOISE OVERLAY (pure CSS texture)
+  ═══════════════════════════════════════════ -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════════
+       HEADER / NAV
+  ═══════════════════════════════════════════ -->
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="#" class="nav-logo">
+        <span class="logo-bracket">[</span>ZA<span class="logo-bracket">]</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#chatbot">AI Assistant</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ═══════════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════════ -->
+    <section class="hero" id="hero">
+      <div class="hero-grid-lines" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-tag">
+          <span class="pulse-dot"></span>
+          Available for opportunities
+        </div>
+        <h1 class="hero-title">
+          <span class="hero-title-line">Zeeshan</span>
+          <span class="hero-title-line accent">Ahmad</span>
+        </h1>
+        <p class="hero-role">
+          <span class="mono">~/</span> AI Engineer &amp; Developer
+        </p>
+        <p class="hero-description">
+          Building intelligent systems at the intersection of Machine Learning,
+          Autonomous Agents, and Automation — turning complex AI research into
+          production-grade software.
+        </p>
+        <div class="hero-actions">
+          <a href="#chatbot" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Chat with My AI
+          </a>
+          <a href="#projects" class="btn btn-ghost">View Projects</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">GPT-4o</span>
+            <span class="stat-label">Powered</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">LLM</span>
+            <span class="stat-label">Fine-tuning</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">Agents</span>
+            <span class="stat-label">& RAG</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll-hint" aria-hidden="true">
+        <span class="mono">scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         ABOUT
+    ═══════════════════════════════════════════ -->
+    <section class="section about" id="about">
+      <div class="container">
+        <div class="section-label mono">01 — About</div>
+        <div class="about-grid">
+          <div class="about-text">
+            <h2 class="section-title">Engineering intelligence<br /><em>that ships.</em></h2>
+            <p>
+              I'm an AI Engineer based in Islamabad, Pakistan, with a deep focus on
+              building production-ready ML systems. My work spans the full lifecycle —
+              from data pipelines and model training to deployment and real-time inference.
+            </p>
+            <p>
+              I specialize in architecting <strong>Intelligent Agents</strong> that
+              reason, plan, and act autonomously, integrating tools like LangChain,
+              OpenAI APIs, and vector databases into robust, scalable applications.
+            </p>
+            <p>
+              My philosophy: AI should be a lever, not a buzzword. Every model,
+              pipeline, and agent I build is designed to solve a real problem
+              and deliver measurable impact.
+            </p>
+            <a href="#contact" class="btn btn-outline">Get in touch →</a>
+          </div>
+          <div class="about-aside">
+            <div class="about-card">
+              <div class="about-card-header mono">profile.json</div>
+              <div class="about-card-body">
+                <div class="json-line"><span class="json-key">"focus"</span>: <span class="json-str">"AI Engineering"</span></div>
+                <div class="json-line"><span class="json-key">"stack"</span>: <span class="json-str">"Python, PyTorch, HF"</span></div>
+                <div class="json-line"><span class="json-key">"llm"</span>: <span class="json-str">"GPT-4o, Llama, Mistral"</span></div>
+                <div class="json-line"><span class="json-key">"infra"</span>: <span class="json-str">"Docker, FastAPI, GCP"</span></div>
+                <div class="json-line"><span class="json-key">"agents"</span>: <span class="json-str">"LangChain, CrewAI"</span></div>
+                <div class="json-line"><span class="json-key">"status"</span>: <span class="json-bool">true</span> <span class="json-comment">// open to work</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         SKILLS
+    ═══════════════════════════════════════════ -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <div class="section-label mono">02 — Skills</div>
+        <h2 class="section-title">Technical Expertise</h2>
+        <div class="skills-grid">
+
+          <div class="skill-card">
+            <div class="skill-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <h3>Machine Learning</h3>
+            <p>Deep learning architectures, model training, fine-tuning LLMs, and deploying scalable inference pipelines using PyTorch and Hugging Face.</p>
+            <div class="skill-tags">
+              <span>PyTorch</span><span>Transformers</span><span>Scikit-learn</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            </div>
+            <h3>Intelligent Agents</h3>
+            <p>Designing multi-agent systems that reason autonomously, use tools, manage memory, and operate in complex agentic workflows end-to-end.</p>
+            <div class="skill-tags">
+              <span>LangChain</span><span>CrewAI</span><span>OpenAI API</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
+            </div>
+            <h3>Automation Solutions</h3>
+            <p>Building intelligent automation pipelines that connect APIs, databases, and AI models into seamless workflows — from data ingestion to action.</p>
+            <div class="skill-tags">
+              <span>FastAPI</span><span>SQLite / PG</span><span>Docker</span>
+            </div>
+          </div>
+
+          <div class="skill-card">
+            <div class="skill-card-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3>RAG & Knowledge Systems</h3>
+            <p>Retrieval-Augmented Generation pipelines using vector databases, semantic search, and grounded generation for accurate, context-aware AI.</p>
+            <div class="skill-tags">
+              <span>Pinecone</span><span>ChromaDB</span><span>FAISS</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         PROJECTS
+    ═══════════════════════════════════════════ -->
+    <section class="section projects" id="projects">
+      <div class="container">
+        <div class="section-label mono">03 — Projects</div>
+        <h2 class="section-title">Selected Work</h2>
+        <div class="projects-list">
+
+          <article class="project-item">
+            <div class="project-meta">
+              <span class="project-num mono">01</span>
+              <div class="project-tags-row">
+                <span class="project-tag">NLP</span>
+                <span class="project-tag">Agents</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3>AI Career Assistant</h3>
+              <p>A custom conversational AI trained on professional background and LinkedIn data. Features a SQLite backend for interaction tracking, automated email/notification triggers, and a GPT-4o-mini core. Deployed live on Hugging Face Spaces with Gradio.</p>
+            </div>
+            <div class="project-links">
+              <a href="#chatbot" class="project-link">
+                Live Demo
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-item">
+            <div class="project-meta">
+              <span class="project-num mono">02</span>
+              <div class="project-tags-row">
+                <span class="project-tag">RAG</span>
+                <span class="project-tag">LLM</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3>Document Intelligence Pipeline</h3>
+              <p>An end-to-end RAG system that ingests enterprise documents, embeds them into a vector store, and serves grounded answers through a FastAPI backend — with automatic citation and source tracing.</p>
+            </div>
+            <div class="project-links">
+              <a href="#contact" class="project-link">
+                Ask me about it
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="project-item">
+            <div class="project-meta">
+              <span class="project-num mono">03</span>
+              <div class="project-tags-row">
+                <span class="project-tag">Automation</span>
+                <span class="project-tag">API</span>
+              </div>
+            </div>
+            <div class="project-body">
+              <h3>Multi-Agent Workflow Engine</h3>
+              <p>A CrewAI-powered multi-agent system with specialized roles (Researcher, Writer, Reviewer) that autonomously completes complex multi-step tasks, complete with tool use and inter-agent communication.</p>
+            </div>
+            <div class="project-links">
+              <a href="#contact" class="project-link">
+                Ask me about it
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CHATBOT — CENTERPIECE SECTION
+    ═══════════════════════════════════════════ -->
+    <section class="section chatbot-section" id="chatbot">
+      <div class="container">
+        <div class="section-label mono">04 — AI Assistant</div>
+        <div class="chatbot-header">
+          <h2 class="section-title">Talk to My Career AI</h2>
+          <p class="chatbot-subtitle">
+            This assistant is trained on my professional background, resume, and experience.
+            Ask it anything — my skills, projects, availability, or what I'd bring to your team.
+          </p>
+          <div class="chatbot-badges">
+            <span class="badge"><span class="badge-dot"></span>GPT-4o-mini</span>
+            <span class="badge">SQLite Backend</span>
+            <span class="badge">Live on HF Spaces</span>
+          </div>
+        </div>
+
+        <div class="chatbot-wrapper">
+          <div class="chatbot-frame-header">
+            <div class="frame-dots">
+              <span></span><span></span><span></span>
+            </div>
+            <span class="mono frame-url">xich3n-convers.hf.space</span>
+            <span class="frame-status"><span class="pulse-dot small"></span>Online</span>
+          </div>
+          <div class="chatbot-embed">
+            <gradio-app
+              src="https://xich3n-convers.hf.space"
+              theme_mode="dark"
+              eager="true"
+            ></gradio-app>
+          </div>
+        </div>
+
+        <p class="chatbot-note mono">
+          ↑ Powered by GPT-4o-mini · Tracks interactions via SQLite · Fires automated notifications
+        </p>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════
+         CONTACT
+    ═══════════════════════════════════════════ -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="section-label mono">05 — Contact</div>
+        <div class="contact-inner">
+          <h2 class="contact-title">Let's build something<br /><em>intelligent.</em></h2>
+          <p class="contact-desc">
+            Whether you're looking to integrate AI into your product, need a
+            custom ML solution, or want to explore what intelligent agents can
+            do for your business — I'd love to talk.
+          </p>
+          <div class="contact-links">
+            <a href="mailto:zeeshan.isb.kp@example.com" class="contact-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              Email Me
+            </a>
+            <a href="https://www.linkedin.com/in/zeeshan-ahmad-49887233b/" target="_blank" rel="noopener" class="contact-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              LinkedIn
+            </a>
+            <a href="https://github.com/Xish3n" target="_blank" rel="noopener" class="contact-link">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span class="mono footer-copy">© 2025 Zeeshan Ahmad</span>
+      <span class="footer-divider">·</span>
+      <span class="footer-stack mono">Built with HTML · CSS · Gradio</span>
+      <span class="footer-divider">·</span>
+      <a href="#hero" class="footer-top mono">↑ Back to top</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
